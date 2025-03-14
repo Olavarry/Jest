@@ -1,0 +1,17 @@
+{
+  "name": "jest",
+  "version": "1.0.0",
+  "description": "Jest POC",
+  "main": "palindrome.js",
+  "scripts": {
+    "test": "jest --verbose"
+  },
+  "author": "Luis Olavarria",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "29.7.0"
+  },
+  "jest": {
+    "testEnvironment": "node"
+  }
+}
