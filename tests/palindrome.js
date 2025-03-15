@@ -12,5 +12,4 @@ const isPalindrome = wordToCheck => {
    
 }
 
- isPalindrome('noon')
 module.exports = { isPalindrome }
