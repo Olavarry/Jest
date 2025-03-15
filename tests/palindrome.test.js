@@ -10,23 +10,22 @@ const invalidLowerUpper = "Reference"
 
 test('Test valid palindrome',()=>{
     const result = isPalindrome(validPalindrome)
-    console.log(result)
-    expect(result).toEqual(validPalindrome)
+    expect(result).toBe(true)
 })
 
 test('Test is not palindrome',()=>{
     const result = isPalindrome(invalidPalindrome)
-    expect(result).not.toEqual(invalidPalindrome)
+    expect(result).toBe(false)
 })
 
 test('Test valid palindrom with spaces',()=>{
     const result = isPalindrome(validPaliWithSpaces)
-    expect(result).toEqual(validPaliWithSpaces)
+    expect(result).toBe(true)
 })
 
 test('Test invalid word with spaces',()=>{
     const result = isPalindrome(invalidPalWithSpaces)
-    expect(result).not.toEqual(invalidPalWithSpaces)
+    expect(result).toBe(false)
 })
 
 test('Test nonalphabetic string',()=>{
