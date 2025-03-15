@@ -1,9 +1,16 @@
 const isPalindrome = wordToCheck => {
     
-    //remove spaces to normal and reversed word
-    return (wordToCheck.split("").reverse().join("").replace(/\s/g, '')===wordToCheck.replace(/\s/g, ''))
-    
+    //remove spaces before validations
+    noSpacesWord = wordToCheck.replace(/\s/g, '')
+    if(/^[a-zA-Z]+$/.test(noSpacesWord)){
+        
+        return (noSpacesWord.split("").reverse().join("")==noSpacesWord)
+            
+    }else{
+        return 'Word contains non-alphabetical characters'
+    }
+   
 }
 
-//console.log(isPalindrome('anita lava la tina'))
+ isPalindrome('noon')
 module.exports = { isPalindrome }

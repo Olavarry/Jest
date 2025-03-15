@@ -30,6 +30,7 @@ test('Test invalid word with spaces',()=>{
 
 test('Test nonalphabetic string',()=>{
     const result = isPalindrome(nonalphabetic)
-    expect(result).toBe('word contains non-alphabetic characters')
+    console.log(result)
+    expect(result).toEqual('Word contains non-alphabetical characters')
     
 })

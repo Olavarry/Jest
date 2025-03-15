@@ -4,7 +4,7 @@
   "description": "Jest POC",
   "main": "palindrome.js",
   "scripts": {
-    "test": "jest --verbose"
+    "test": "jest"
   },
   "author": "Luis Olavarria",
   "license": "ISC",
