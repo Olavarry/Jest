@@ -1,8 +1,8 @@
-const { isPalindrome } = require('./palindrome.js')
+const { isPalindrome } = require('../functions/palindrome.js')
 
 const validPalindrome = "noon"
 const invalidPalindrome = "Luis"
-const validPaliWithSpaces = "was it a cat i saw"
+const validPaliWithSpaces = "Was it a cat I saw"
 const invalidPalWithSpaces = "hello how are you"
 const nonalphabetic = "no55on"
 const validLowerUpper = "Refer"
@@ -30,7 +30,6 @@ test('Test invalid word with spaces',()=>{
 
 test('Test nonalphabetic string',()=>{
     const result = isPalindrome(nonalphabetic)
-    console.log(result)
     expect(result).toEqual('Word contains non-alphabetical characters')
     
 })
