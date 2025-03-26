@@ -1,13 +1,20 @@
 const axios = require('axios')
 
-const getAlbums = async () => {
+const getAlbumTitle = async () => {
     
     const response = await axios.get('https://jsonplaceholder.typicode.com/albums');
-    return response.data[0].title
+    return response.data.title
+}
+
+const getAlbumId = async () => {
+    
+    const response = await axios.get('https://jsonplaceholder.typicode.com/albums');
+    //console.log(response.data)
+    return response.data.id
 }
 
 // Log the result of the async function
 //getAlbums().then(data => console.log(data)).catch(err => console.error(err));
 
 // console.log(getAlbums().then(data => console.log(data)))
-module.exports = { getAlbums }
+module.exports = { getAlbumTitle, getAlbumId }
