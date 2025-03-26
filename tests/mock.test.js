@@ -1,8 +1,8 @@
 const axios = require('axios')
 const { getAlbumTitle, getAlbumId } = require('../functions/mock.js')
- jest.mock('axios')
+jest.mock('axios') //this is the mock function from axios
 
-
+//create const with album data
  const albumData= {
     userId: 1,
     id: 200,
@@ -11,10 +11,11 @@ const { getAlbumTitle, getAlbumId } = require('../functions/mock.js')
 
 test('Get Album Id', async ()=>{
     
-    const resp = { data: albumData }
+    // creating response containing albumData and mocking
+    const resp = { data: albumData } 
     axios.get.mockResolvedValue(resp)
+    //This is calling the function where api call is, instead of making actyual request we're mocking the repsonse
     const apiData = await getAlbumId()
-    //console.log(apiData)
     expect(apiData).toEqual(200)
 })
 
@@ -27,12 +28,14 @@ test('Get Album title', async ()=>{
     expect(apiData).toBe('This is the mock Album')
 })
 
+//Below tests were valid for actual api request
+
 // test('Get Album Id', async ()=>{
 //     const getId = await getAlbumId()
 //     expect(getId).toEqual(1)
 // })
 
 // test('Get Album title', async ()=>{
-//     const getTitle = await getAlbums()
+//     const getTitle = await getAlbumTitle()
 //     expect(getTitle).toBe('quidem molestiae enim')
 // })
